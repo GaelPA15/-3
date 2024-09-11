@@ -1,0 +1,76 @@
+/* Estilos generales */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d8b4fe;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Botón a tamaño completo en móviles */
+}
+
+button:hover {
+  background-color: #c084fc;
+}
+
+.hidden {
+  display: none;
+}
+
+#heartsContainer {
+  position: relative;
+  margin-top: 20px;
+  height: 150px; /* Aseguramos que haya espacio para los corazones */
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  color: red;
+  animation: float 1.5s ease-in-out forwards;
+}
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1.5);
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .heart {
+    font-size: 20px;
+  }
+}
